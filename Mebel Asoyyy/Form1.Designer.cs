@@ -41,6 +41,7 @@ namespace Mebel_Asoyyy
             this.labelext = new System.Windows.Forms.Label();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,12 +50,13 @@ namespace Mebel_Asoyyy
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(52, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 50);
+            this.label1.Size = new System.Drawing.Size(172, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Login Mebel Asoy";
+            this.label1.Text = "Halaman Login";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -121,10 +123,10 @@ namespace Mebel_Asoyyy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(401, 288);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 36);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Clear Fields";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -133,10 +135,10 @@ namespace Mebel_Asoyyy
             // labelext
             // 
             this.labelext.AutoSize = true;
-            this.labelext.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelext.Location = new System.Drawing.Point(1138, 9);
             this.labelext.Name = "labelext";
-            this.labelext.Size = new System.Drawing.Size(47, 36);
+            this.labelext.Size = new System.Drawing.Size(35, 20);
             this.labelext.TabIndex = 19;
             this.labelext.Text = "Exit";
             this.labelext.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -146,31 +148,44 @@ namespace Mebel_Asoyyy
             // 
             this.txtpassword.BackColor = System.Drawing.Color.SkyBlue;
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtpassword.Location = new System.Drawing.Point(114, 244);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(405, 33);
+            this.txtpassword.Size = new System.Drawing.Size(0, 0);
             this.txtpassword.TabIndex = 21;
             // 
             // username
             // 
-            this.username.BackColor = System.Drawing.Color.SkyBlue;
+            this.username.BackColor = System.Drawing.Color.LightCyan;
             this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.username.Font = new System.Drawing.Font("Poppins Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.username.Location = new System.Drawing.Point(114, 152);
             this.username.Multiline = true;
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(405, 33);
             this.username.TabIndex = 22;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(114, 244);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(405, 33);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1197, 619);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.username);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.labelext);
@@ -182,7 +197,7 @@ namespace Mebel_Asoyyy
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -212,6 +227,6 @@ namespace Mebel_Asoyyy
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
-

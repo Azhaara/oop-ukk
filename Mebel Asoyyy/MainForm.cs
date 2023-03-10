@@ -23,7 +23,7 @@ namespace Mebel_Asoyyy
         {
 
 
-            string connection = "server=localhost; user id=root; database=mebel";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
             string query = "SELECT * FROM tbl_produk";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -45,7 +45,7 @@ namespace Mebel_Asoyyy
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string connection = "server=localhost; user id=root; database=mebel";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
             string query = "INSERT INTO tbl_produk(nama_produk,harga_produk,stok_produk,IMAGE)VALUES('"+ this.NAMAPRODUK.Text + "','" + this.HARGAPRODUK.Text + "','" + this.STOKPRODUK.Text + "','" + Path.GetFileName(pictureBox2.ImageLocation) + "')";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -60,8 +60,8 @@ namespace Mebel_Asoyyy
         private void button3_Click(object sender, EventArgs e)
         {
 
-            string connection = "server=localhost; user id=root; database=mebel";
-            string query = "UPDATE tbl_produk SET nama_produk='" + this.NAMAPRODUK.Text + "',harga_produk='"  + this.HARGAPRODUK.Text + "',stok_produk='" + this.STOKPRODUK + "' WHERE id_produk='"+ this.IDPRODUK.Text +"'";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
+            string query = "UPDATE tbl_produk SET nama_produk='" + this.NAMAPRODUK.Text + "',harga_produk='"  + this.HARGAPRODUK.Text + "',stok_produk='" + this.STOKPRODUK.Text + "' WHERE id_produk='"+ this.IDPRODUK.Text +"'";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader dr;
@@ -80,7 +80,7 @@ namespace Mebel_Asoyyy
         private void button5_Click(object sender, EventArgs e)
         {
 
-            string connection = "server=localhost; user id=root; database=mebel";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
             string query = "SELECT * FROM tbl_produk";
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -101,8 +101,9 @@ namespace Mebel_Asoyyy
         private void button4_Click(object sender, EventArgs e)
         {
 
-            string connection = "server=localhost; user id=root; database=mebel";
-            string query = "DELETE FROM tbl_produk WHERE id_produk='" + this.IDPRODUK.Text + "'";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
+            string query = "DELETE FROM tbl_produk WHERE id='" + this.IDPRODUK.Text + "'";
+           
             MySqlConnection conn = new MySqlConnection(connection);
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader dr;
@@ -115,7 +116,7 @@ namespace Mebel_Asoyyy
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string connection = "server=localhost; user id=root; database=mebel";
+            string connection = "Server=localhost;Port=3306;UID=root;PWD=;Database=mabel";
             MySqlConnection con = new MySqlConnection(connection);
             MySqlDataAdapter da;
             DataTable dt;
@@ -145,6 +146,16 @@ namespace Mebel_Asoyyy
                 pictureBox2.ImageLocation = openfd.FileName;
                 pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

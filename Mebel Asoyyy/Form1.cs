@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Mebel_Asoyyy
 {
@@ -29,7 +30,7 @@ namespace Mebel_Asoyyy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (username.Text == "admin" && txtpassword.Text == "admin")
+            if (username.Text == "admin" && textBox1.Text == "admin")
             {
                 new MainForm().Show();
                 this.Hide();
@@ -39,7 +40,7 @@ namespace Mebel_Asoyyy
             {
                 MessageBox.Show("Username Atau Password Kamu Salah :)");
                 username.Clear();
-                txtpassword.Clear();
+                textBox1.Clear();
                 username.Focus();
             }
         }
@@ -47,13 +48,28 @@ namespace Mebel_Asoyyy
         private void label2_Click(object sender, EventArgs e)
         {
             username.Clear();
-            txtpassword.Clear();
+            textBox1.Clear();
             username.Focus();
         }
 
         private void labelext_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
